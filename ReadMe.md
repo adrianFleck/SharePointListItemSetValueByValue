@@ -34,5 +34,5 @@ The second has ony a demo function with relevant code that is not yet called in 
 
 - The error occurs when calling the "SetFieldValueByValue(ListItem, termValue)" function from Microsoft.SharePoint.Client.Taxonomy.
 - Additionally, the error occurs when copying a file using CopyFile from Microsoft.SharePoint.Client.
-- **The error is specific to the tenant.** This error occurs at Phönix Contact tenant, but not in two of our development tenants.
+- **The error is specific to the tenant.** This error occurs at productive tenant, but not in two of our development tenants.
 - It seems highly likely that the error lies with Microsoft SharePoint. Especially when copying a file, I see no way to introduce any potential source of error in our code.
