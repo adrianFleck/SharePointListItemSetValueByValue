@@ -64,4 +64,17 @@ public class TestApplication
         await context.ExecuteQueryRetryAsync();
         Console.WriteLine($"Updated item \"{item.FieldValues["Title"]}\" with term \"{newTermGuid}\"");
     }
+
+    public async Task CopyFileAsync(ClientRuntimeContext context, string sourceUrl, string targetUrl, bool overwriteFile, CancellationToken cancellationToken = default)
+    {
+        try
+        {
+            MoveCopyUtil.CopyFile(context, sourceUrl, targetUrl, overwriteFile, new MoveCopyOptions());
+            await context.ExecuteQueryRetryAsync();
+        }
+        catch (Exception ex)
+        {
+            throw;
+        }
+    }
 }
