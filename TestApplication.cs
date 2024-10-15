@@ -31,7 +31,7 @@ public class TestApplication
         var passwordSecureString = new NetworkCredential("", sharePointAppServiceUserPassword).SecurePassword;
         using var authManager = PnP.Framework.AuthenticationManager.CreateWithCredentials(sharePointAppServiceClientId, sharePointAppServiceUserName, passwordSecureString);
         using var context = await authManager.GetContextAsync(sharePointSiteUrl);
-        context.ExecutingWebRequest += (sender, e) => e.WebRequestExecutor.WebRequest.UserAgent = "NONISV|PhoenixContact|Salesnet/1.0";
+        context.ExecutingWebRequest += (sender, e) => e.WebRequestExecutor.WebRequest.UserAgent = "NONISV|MyCompany|MyApp/1.0";
 
         var web = context.Web;
         context.Load(web);
