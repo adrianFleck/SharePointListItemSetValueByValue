@@ -24,11 +24,11 @@ This is a small test project to test the SetFieldValueByValue method of the `Mic
 
 ## Bug Description
 
-1) When setting a value in a list field with the `SetFieldValueByValue` method of the `Microsoft.SharePoint.Client.Taxonomy` class, the value is empty after the operation even if there was a term value before. No error is thrown and the code runs without any exceptions or warnings.
+1) When setting a term field value in a list field with the `SetFieldValueByValue` method of the `Microsoft.SharePoint.Client.Taxonomy` class, the value is empty after the operation even if there was a term value before. No error is thrown and the code runs without any exceptions or warnings.
 2) When copying a file from one library to another with the `CopyFile` method of the `Microsoft.SharePoint.Client` class, the file is successfully copied without any error but the term values of the metadata are incorrect. The term values may be empty or even incorrect. Some screenshots from debugging are in the `images` folder. They show the term values before and after the operation. The term values are correct on the original item but incorrect on the copied item.
 
-The code only has a working example for the first bug.
-The second has ony a demo function with relevant code that is not yet called in this application. This bug can be reproduced by calling the `CopyFile` method to copy a file with term metadata from one library to another. We copied it from one Site Collection to another Site Collection in the same tenant.
+The code only has a working example for the `SetFieldValueByValue` bug.
+The `CopyFile` bug has ony a demo function with relevant code that is not yet called in this application. This bug can be reproduced by calling the `CopyFile` method to copy a file with term metadata from one library to another. We copied a file from one Site Collection to another Site Collection in the same tenant.
 
 ## Bug Analysis
 
