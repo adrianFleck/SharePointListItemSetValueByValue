@@ -1,0 +1,4 @@
+config.json
+/.vs/TestApp
+/bin/Debug/net8.0
+/obj
